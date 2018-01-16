@@ -55,8 +55,8 @@ def get_train_eval_list(train_eval_lst, train_lst, eval_lst, eval_percent, is_bl
         l = len(img_path_list)
         pick_num_eval = int(pick_percent * l)
         #pick_idx = random.randint(0, l-1)
-        pick_idx_eval = random.sample(range(0, l-1), pick_num_eval)
-        pick_idx_train = list(set(range(0, l-1)) - set(pick_idx_eval))
+        pick_idx_eval = random.sample(range(0, l), pick_num_eval)
+        pick_idx_train = list(set(range(0, l)) - set(pick_idx_eval))
 
         for i in pick_idx_train:
             cls_2_path_pick_train[cls_id].append(cls_2_path[cls_id][i])
