@@ -114,7 +114,7 @@ if __name__ == '__main__':
     print('picked mxnet lst path: %s' % args.out_lst)
 
     # step 1
-    # python -u ./extract_mxnet_lst.py --in_lst train.lst --out_lst mxnet_pick.lst --pick_cls_num 16000 > statistics_pick.txt
+    # python -u ./extract_mxnet_lst_v2.py --in_lst train.lst --out_lst mxnet_pick.lst --pick_cls_num 16000 > statistics_pick.txt
     # step 2
     # python -u /home/zhouji/tp_server/tpdetect/huge_cls/tools/blance_mxnet_lst.py --mxnet_lst mxnet_pick.lst --mxnet_out_lst mxnet_all.lst --is_blance 1 --blance_thread 40 > statistics_blance.txt
     # step 3
