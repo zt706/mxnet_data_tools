@@ -49,8 +49,9 @@ def blance_mxnet_list(in_lst, out_lst, pick_cls_num):
             total_img_be_10 += l
             print("[statistics not need cls] cls_id:%s, img_num: %d" % (cls_id, l))
 
-    print("[statistics extract cls >= 10 iid] avg_num_per_cls: %d img per cls" % (total_img_ae_10/len(cls_2_path_ae_10.keys())))
-    print("[statistics extract cls <= 10 iid] avg_num_per_cls: %d img per cls" % (total_img_be_10/len(cls_2_path_be_10.keys())))
+    print("[statistics extract cls >= 10 iid] avg_num_per_cls: %d img per cls, total_cls: %d" % (total_img_ae_10/len(cls_2_path_ae_10.keys()), len(cls_2_path_ae_10.keys())))
+    print("[statistics extract cls <= 10 iid] avg_num_per_cls: %d img per cls, total_cls: %d" % (total_img_be_10/len(cls_2_path_be_10.keys()), len(cls_2_path_be_10.keys())))
+    
 
     #k_l = cls_2_path.keys()
     k_l = cls_2_path_ae_10.keys()
