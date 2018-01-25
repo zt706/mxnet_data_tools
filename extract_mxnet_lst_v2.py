@@ -74,7 +74,7 @@ def blance_mxnet_list(in_lst, out_lst, pick_cls_num):
 
     random.seed(101)
     print ('total cls_num: %d, pick_cls_num: %d' % (len(k_l), pick_cls_num))
-    assert len(k_l) > pick_cls_num 
+    assert len(k_l) >= pick_cls_num 
     cls_2_path_pick = {}
     pick_cls_list = random.sample(k_l, pick_cls_num)
     for cls in pick_cls_list:
